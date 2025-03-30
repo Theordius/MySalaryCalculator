@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		10E860BD2D996DB200CDD4D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10E860A42D996DAB00CDD4D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10E860AB2D996DAB00CDD4D2;
+			remoteInfo = MySalaryCalculator;
+		};
+		10E860C72D996DB200CDD4D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10E860A42D996DAB00CDD4D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10E860AB2D996DAB00CDD4D2;
+			remoteInfo = MySalaryCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10E860AC2D996DAB00CDD4D2 /* MySalaryCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySalaryCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E860BC2D996DB200CDD4D2 /* MySalaryCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySalaryCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E860C62D996DB200CDD4D2 /* MySalaryCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySalaryCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		10E860AE2D996DAB00CDD4D2 /* MySalaryCalculator */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MySalaryCalculator;
+			sourceTree = "<group>";
+		};
+		10E860BF2D996DB200CDD4D2 /* MySalaryCalculatorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MySalaryCalculatorTests;
+			sourceTree = "<group>";
+		};
+		10E860C92D996DB200CDD4D2 /* MySalaryCalculatorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MySalaryCalculatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10E860A92D996DAB00CDD4D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E860B92D996DB200CDD4D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E860C32D996DB200CDD4D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10E860A32D996DAB00CDD4D2 = {
+			isa = PBXGroup;
+			children = (
+				10E860AE2D996DAB00CDD4D2 /* MySalaryCalculator */,
+				10E860BF2D996DB200CDD4D2 /* MySalaryCalculatorTests */,
+				10E860C92D996DB200CDD4D2 /* MySalaryCalculatorUITests */,
+				10E860AD2D996DAB00CDD4D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10E860AD2D996DAB00CDD4D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10E860AC2D996DAB00CDD4D2 /* MySalaryCalculator.app */,
+				10E860BC2D996DB200CDD4D2 /* MySalaryCalculatorTests.xctest */,
+				10E860C62D996DB200CDD4D2 /* MySalaryCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10E860AB2D996DAB00CDD4D2 /* MySalaryCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E860D02D996DB200CDD4D2 /* Build configuration list for PBXNativeTarget "MySalaryCalculator" */;
+			buildPhases = (
+				10E860A82D996DAB00CDD4D2 /* Sources */,
+				10E860A92D996DAB00CDD4D2 /* Frameworks */,
+				10E860AA2D996DAB00CDD4D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				10E860AE2D996DAB00CDD4D2 /* MySalaryCalculator */,
+			);
+			name = MySalaryCalculator;
+			packageProductDependencies = (
+			);
+			productName = MySalaryCalculator;
+			productReference = 10E860AC2D996DAB00CDD4D2 /* MySalaryCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10E860BB2D996DB200CDD4D2 /* MySalaryCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E860D32D996DB300CDD4D2 /* Build configuration list for PBXNativeTarget "MySalaryCalculatorTests" */;
+			buildPhases = (
+				10E860B82D996DB200CDD4D2 /* Sources */,
+				10E860B92D996DB200CDD4D2 /* Frameworks */,
+				10E860BA2D996DB200CDD4D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10E860BE2D996DB200CDD4D2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				10E860BF2D996DB200CDD4D2 /* MySalaryCalculatorTests */,
+			);
+			name = MySalaryCalculatorTests;
+			packageProductDependencies = (
+			);
+			productName = MySalaryCalculatorTests;
+			productReference = 10E860BC2D996DB200CDD4D2 /* MySalaryCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10E860C52D996DB200CDD4D2 /* MySalaryCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E860D62D996DB300CDD4D2 /* Build configuration list for PBXNativeTarget "MySalaryCalculatorUITests" */;
+			buildPhases = (
+				10E860C22D996DB200CDD4D2 /* Sources */,
+				10E860C32D996DB200CDD4D2 /* Frameworks */,
+				10E860C42D996DB200CDD4D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10E860C82D996DB200CDD4D2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				10E860C92D996DB200CDD4D2 /* MySalaryCalculatorUITests */,
+			);
+			name = MySalaryCalculatorUITests;
+			packageProductDependencies = (
+			);
+			productName = MySalaryCalculatorUITests;
+			productReference = 10E860C62D996DB200CDD4D2 /* MySalaryCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10E860A42D996DAB00CDD4D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					10E860AB2D996DAB00CDD4D2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					10E860BB2D996DB200CDD4D2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 10E860AB2D996DAB00CDD4D2;
+					};
+					10E860C52D996DB200CDD4D2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 10E860AB2D996DAB00CDD4D2;
+					};
+				};
+			};
+			buildConfigurationList = 10E860A72D996DAB00CDD4D2 /* Build configuration list for PBXProject "MySalaryCalculator" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10E860A32D996DAB00CDD4D2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 10E860AD2D996DAB00CDD4D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10E860AB2D996DAB00CDD4D2 /* MySalaryCalculator */,
+				10E860BB2D996DB200CDD4D2 /* MySalaryCalculatorTests */,
+				10E860C52D996DB200CDD4D2 /* MySalaryCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10E860AA2D996DAB00CDD4D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E860BA2D996DB200CDD4D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E860C42D996DB200CDD4D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10E860A82D996DAB00CDD4D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E860B82D996DB200CDD4D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E860C22D996DB200CDD4D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10E860BE2D996DB200CDD4D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10E860AB2D996DAB00CDD4D2 /* MySalaryCalculator */;
+			targetProxy = 10E860BD2D996DB200CDD4D2 /* PBXContainerItemProxy */;
+		};
+		10E860C82D996DB200CDD4D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10E860AB2D996DAB00CDD4D2 /* MySalaryCalculator */;
+			targetProxy = 10E860C72D996DB200CDD4D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10E860CE2D996DB200CDD4D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10E860CF2D996DB200CDD4D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10E860D12D996DB200CDD4D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MySalaryCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 4MD5T682WB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.theosoft.MySalaryCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10E860D22D996DB200CDD4D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MySalaryCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 4MD5T682WB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.theosoft.MySalaryCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10E860D42D996DB300CDD4D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MD5T682WB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.theosoft.MySalaryCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySalaryCalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySalaryCalculator";
+			};
+			name = Debug;
+		};
+		10E860D52D996DB300CDD4D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MD5T682WB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.theosoft.MySalaryCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySalaryCalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySalaryCalculator";
+			};
+			name = Release;
+		};
+		10E860D72D996DB300CDD4D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MD5T682WB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.theosoft.MySalaryCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySalaryCalculator;
+			};
+			name = Debug;
+		};
+		10E860D82D996DB300CDD4D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MD5T682WB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.theosoft.MySalaryCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySalaryCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10E860A72D996DAB00CDD4D2 /* Build configuration list for PBXProject "MySalaryCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E860CE2D996DB200CDD4D2 /* Debug */,
+				10E860CF2D996DB200CDD4D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E860D02D996DB200CDD4D2 /* Build configuration list for PBXNativeTarget "MySalaryCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E860D12D996DB200CDD4D2 /* Debug */,
+				10E860D22D996DB200CDD4D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E860D32D996DB300CDD4D2 /* Build configuration list for PBXNativeTarget "MySalaryCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E860D42D996DB300CDD4D2 /* Debug */,
+				10E860D52D996DB300CDD4D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E860D62D996DB300CDD4D2 /* Build configuration list for PBXNativeTarget "MySalaryCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E860D72D996DB300CDD4D2 /* Debug */,
+				10E860D82D996DB300CDD4D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10E860A42D996DAB00CDD4D2 /* Project object */;
+}
