@@ -1,40 +1,49 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "About App" : {
+
+    },
+    "Appointment" : {
+
+    },
     "B2B View" : {
 
     },
-    "Brutto" : {
+    "Calculate" : {
 
     },
-    "Forma wypłaty" : {
+    "Choose your employment form" : {
+
+    },
+    "Dividend" : {
+
+    },
+    "FTE" : {
 
     },
     "FTE View" : {
 
     },
-    "Koszty uzyskania przychodu" : {
+    "Gross" : {
+
+    },
+    "Gross value" : {
+
+    },
+    "Income costs" : {
 
     },
     "KUP" : {
 
     },
-    "Kwota brutto" : {
+    "LTD" : {
 
     },
-    "Na konto" : {
+    "Salary form" : {
 
     },
-    "O Aplikacji" : {
-
-    },
-    "Oblicz" : {
-
-    },
-    "Spółka z o.o." : {
-
-    },
-    "Wybierz formę wypłaty" : {
+    "To account" : {
 
     }
   },

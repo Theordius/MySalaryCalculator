@@ -19,9 +19,7 @@ struct LTDFeature: Sendable {
         var flatTaxSelected: Bool = false
         var netAmount: Decimal?
 
-        // Dla powołania i (opcjonalnie) innych, można dostosować aktywność toggla podatku liniowego
         var flatTaxEnabled: Bool {
-            // Przykładowo: dla powołania można mieć możliwość wyboru podatku, dla dywidendy wyłączamy.
             employmentForm == .appointment
         }
     }
@@ -41,8 +39,7 @@ struct LTDFeature: Sendable {
         }
 
         @CasePathable
-        enum ChildAction: Equatable, Sendable {
-        }
+        enum ChildAction: Equatable, Sendable {}
     }
 
     init() {}
@@ -82,23 +79,23 @@ private extension LTDFeature {
             return .none
 
         case .calculate:
-                  let base = state.grossAmount - state.costOfRevenue
-                  let taxRate: Decimal
-                  let healthInsurance: Decimal
+            let base = state.grossAmount - state.costOfRevenue
+            let taxRate: Decimal
+            let healthInsurance: Decimal
 
-                  switch state.employmentForm {
-                  case .appointment:
-                      taxRate = 0.12
-                      healthInsurance = 0.09
-                  case .dividend:
-                      taxRate = 0.19
-                      healthInsurance = 0.0
-                  case .fte:
-                      taxRate = 0.12
-                      healthInsurance = 0.0775 
-                  }
-                  state.netAmount = base * (1 - (taxRate + healthInsurance))
-                  return .none
-              }
-          }
+            switch state.employmentForm {
+            case .appointment:
+                taxRate = 0.12
+                healthInsurance = 0.09
+            case .dividend:
+                taxRate = 0.19
+                healthInsurance = 0.0
+            case .fte:
+                taxRate = 0.12
+                healthInsurance = 0.0775
+            }
+            state.netAmount = base * (1 - (taxRate + healthInsurance))
+            return .none
+        }
+    }
 }

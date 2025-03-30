@@ -68,26 +68,20 @@ private extension AppView {
     @ToolbarContentBuilder
     private func toolbarContent() -> some ToolbarContent {
         ToolbarItemGroup(placement: .bottomBar) {
-            HStack(spacing: .zero) {
+            HStack(spacing: 32) {
                 tabBarButton(title: "About", systemImage: "info.circle", tab: .about)
-                Spacer()
                 tabBarButton(title: "LTD", systemImage: "building.2", tab: .ltd)
-                Spacer()
+
                 tabBarButton(title: "B2B", systemImage: "briefcase", tab: .b2b)
-               Spacer()
+
                 tabBarButton(title: "FTE", systemImage: "person.crop.circle", tab: .fte)
-           }
-            .padding(.horizontal, 4)
-            .padding(.vertical, 4)
-            .background(
-                LinearGradient(
-                    colors: [Color(.systemGray5), Color(.systemGray6)],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .cornerRadius(20)
-                .tabBarShadow()
-            )
+            }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 8)
+            .background(Material.ultraThick)
+            .cornerRadius(20)
+            .tabBarShadow()
+
             .padding()
         }
     }

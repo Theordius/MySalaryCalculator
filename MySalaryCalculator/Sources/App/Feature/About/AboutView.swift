@@ -38,7 +38,7 @@ struct AboutView: View {
                     }
                 }
             }
-            .navigationTitle("O Aplikacji")
+            .navigationTitle("About App")
         }
     }
 }

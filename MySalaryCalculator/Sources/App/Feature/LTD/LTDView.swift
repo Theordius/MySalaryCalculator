@@ -15,27 +15,32 @@ struct LTDView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                Form {
-                    Section(header: Text("Wybierz formę wypłaty")) {
-                        Picker("Forma wypłaty", selection: $store.employmentForm.sending(\.view.employmentFormChanged)) {
-                            ForEach(EmploymentForm.allCases, id: \.self) { form in
-                                Text(form.rawValue.capitalized).tag(form)
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                    }
+            VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Choose your employment form")
+                        .font(.subheadline)
 
-                    Section(header: Text("Kwota brutto")) {
+                    Picker("Salary form", selection: $store.employmentForm.sending(\.view.employmentFormChanged)) {
+                        ForEach(EmploymentForm.allCases, id: \.self) { form in
+                            Text(form.description)
+                                .tag(form)
+                        }
+                    }
+                }
+                .pickerStyle(.segmented)
+                .padding()
+
+                Form {
+                    Section(header: Text("Gross value")) {
                         TextField(
-                            "Brutto",
+                            "Gross",
                             value: $store.grossAmount.sending(\.view.grossChanged),
                             format: .number
                         )
                         .keyboardType(.decimalPad)
                     }
 
-                    Section(header: Text("Koszty uzyskania przychodu")) {
+                    Section(header: Text("Income costs")) {
                         TextField(
                             "KUP",
                             value: $store.costOfRevenue.sending(\.view.costChanged),
@@ -47,26 +52,24 @@ struct LTDView: View {
                     Section {
                         HStack {
                             Spacer()
-                            Button("Oblicz") {
-                                
+                            Button("Calculate") {
                                 send(.calculate)
                             }
                             Spacer()
                         }
                     }
 
-
                     if let net = store.netAmount {
-                        Section(header: Text("Na konto")) {
+                        Section(header: Text("To account")) {
                             Text(net.formatted(.currency(code: "PLN")))
                                 .font(.title2)
                                 .bold()
                         }
                     }
                 }
+                .animation(.default, value: store.netAmount)
             }
-            .navigationTitle("Spółka z o.o.")
-
+            .navigationTitle("LTD")
         }
     }
 }
