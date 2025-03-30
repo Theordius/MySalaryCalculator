@@ -70,6 +70,9 @@ struct AppFeature: Sendable {
                 return .none
             }
         }
+        Scope(state: \.ltdState, action: \.child.ltd, child: { LTDFeature() })
+        Scope(state: \.b2bState, action: \.child.b2b, child: { B2BFeature() })
+        Scope(state: \.fteState, action: \.child.fte, child: { FTEFeature() })
     }
 }
 
