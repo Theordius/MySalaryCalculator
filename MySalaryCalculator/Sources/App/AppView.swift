@@ -68,21 +68,17 @@ private extension AppView {
     @ToolbarContentBuilder
     private func toolbarContent() -> some ToolbarContent {
         ToolbarItemGroup(placement: .bottomBar) {
-            HStack(spacing: 32) {
+            HStack(spacing: 16) {
                 tabBarButton(title: "About", systemImage: "info.circle", tab: .about)
                 tabBarButton(title: "LTD", systemImage: "building.2", tab: .ltd)
-
                 tabBarButton(title: "B2B", systemImage: "briefcase", tab: .b2b)
-
                 tabBarButton(title: "FTE", systemImage: "person.crop.circle", tab: .fte)
             }
-            .padding(.horizontal, 8)
-            .padding(.vertical, 8)
-            .background(Material.ultraThick)
+            .padding(.horizontal, 32)
+            .padding(.vertical, 4)
+            .background(Material.ultraThickMaterial)
             .cornerRadius(20)
             .tabBarShadow()
-
-            .padding()
         }
     }
 
@@ -95,7 +91,7 @@ private extension AppView {
                 Text(title)
                     .font(.caption)
             }
-            .foregroundColor(store.selectedTab == tab ? .accentColor : .secondary)
+            .tint(store.selectedTab == tab ? .accentColor : .secondary)
         }
     }
 }

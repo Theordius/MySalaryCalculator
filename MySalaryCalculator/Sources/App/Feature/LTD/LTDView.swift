@@ -10,66 +10,39 @@ import ComposableArchitecture
 
 @ViewAction(for: LTDFeature.self)
 struct LTDView: View {
-    // MARK: - Properties:
-    @Bindable var store: StoreOf<LTDFeature>
+    let store: StoreOf<LTDFeature>
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 16) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Choose your employment form")
-                        .font(.subheadline)
+            WithViewStore(store, observe: { $0 }) { viewStore in
+                VStack(spacing: 16) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Choose payment form")
+                            .font(.subheadline)
+                            .padding(.horizontal)
 
-                    Picker("Salary form", selection: $store.employmentForm.sending(\.view.employmentFormChanged)) {
-                        ForEach(EmploymentForm.allCases, id: \.self) { form in
-                            Text(form.description)
-                                .tag(form)
-                        }
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding()
-
-                Form {
-                    Section(header: Text("Gross value")) {
-                        TextField(
-                            "Gross",
-                            value: $store.grossAmount.sending(\.view.grossChanged),
-                            format: .number
-                        )
-                        .keyboardType(.decimalPad)
-                    }
-
-                    Section(header: Text("Income costs")) {
-                        TextField(
-                            "KUP",
-                            value: $store.costOfRevenue.sending(\.view.costChanged),
-                            format: .number
-                        )
-                        .keyboardType(.decimalPad)
-                    }
-
-                    Section {
-                        HStack {
-                            Spacer()
-                            Button("Calculate") {
-                                send(.calculate)
+                        Picker("Payment form", selection: viewStore.binding(
+                            get: \.form.employmentForm,
+                            send: { .child(.form(.view(.employmentFormChanged($0)))) }
+                        )) {
+                            ForEach([EmploymentForm.appointment, .dividend, .fte], id: \.self) { form in
+                                Text(form.description)
+                                    .tag(form)
                             }
-                            Spacer()
                         }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal)
                     }
 
-                    if let net = store.netAmount {
-                        Section(header: Text("To account")) {
-                            Text(net.formatted(.currency(code: "PLN")))
-                                .font(.title2)
-                                .bold()
-                        }
-                    }
+                    SalaryFormView(
+                        store: store.scope(
+                            state: \.form,
+                            action: \.child.form
+                        )
+                    )
                 }
-                .animation(.default, value: store.netAmount)
+                .navigationTitle("LTD")
             }
-            .navigationTitle("LTD")
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum EmploymentForm: String, CaseIterable, Equatable, Sendable {
-    case appointment, dividend, fte
+    case appointment, dividend, fte, b2b
 
     var description: LocalizedStringKey {
         switch self {
@@ -18,6 +18,9 @@ enum EmploymentForm: String, CaseIterable, Equatable, Sendable {
             return "Dividend"
         case .fte:
             return "FTE"
+
+        case .b2b:
+            return "B2B"
         }
     }
 }
