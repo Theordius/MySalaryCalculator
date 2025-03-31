@@ -29,9 +29,9 @@ struct SalaryFormView: View {
                     .keyboardType(.decimalPad)
                 }
 
-                Section(header: Text("Income costs")) {
+                Section(header: Text("Cost of Revenue")) {
                     TextField(
-                        "KUP",
+                        "Revenue",
                         text: viewStore.binding(
                             get: { $0.costOfRevenue == 0 ? "" : "\($0.costOfRevenue)" },
                             send: { text in
@@ -41,6 +41,16 @@ struct SalaryFormView: View {
                         )
                     )
                     .keyboardType(.decimalPad)
+                }
+
+                Section {
+                    HStack {
+                        Spacer()
+                        Button("Calculate") {
+                            send(.calculate)
+                        }
+                        Spacer()
+                    }
                 }
 
                 if let net = viewStore.netAmount {
@@ -53,14 +63,6 @@ struct SalaryFormView: View {
             }
             .animation(.default, value: viewStore.netAmount)
 
-            HStack {
-                Spacer()
-                Button("Calculate") {
-                    send(.calculate)
-                }
-                .buttonStyle(.borderedProminent)
-                Spacer()
-            }
             .padding()
         }
     }

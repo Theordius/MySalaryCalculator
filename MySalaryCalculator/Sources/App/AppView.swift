@@ -80,16 +80,19 @@ private extension AppView {
             .cornerRadius(20)
             .tabBarShadow()
         }
+        ToolbarItem(placement: .topBarTrailing) {
+            LanguageOptionsMenuView()
+        }
     }
 
-    private func tabBarButton(title: String, systemImage: String, tab: AppFeature.Tab) -> some View {
+    private func tabBarButton(title: LocalizedStringKey, systemImage: String, tab: AppFeature.Tab) -> some View {
         Button {
             send(.changeTab(tab))
         } label: {
             VStack {
                 Image(systemName: systemImage)
                 Text(title)
-                    .font(.caption)
+                    .font(.footnote)
             }
             .tint(store.selectedTab == tab ? .accentColor : .secondary)
         }
@@ -104,5 +107,6 @@ private extension AppView {
                 reducer: { AppFeature() }
             )
         )
+        .environmentObject(AppData())
     }
 }

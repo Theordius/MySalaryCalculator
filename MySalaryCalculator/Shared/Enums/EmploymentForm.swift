@@ -18,7 +18,6 @@ enum EmploymentForm: String, CaseIterable, Equatable, Sendable {
             return "Dividend"
         case .fte:
             return "FTE"
-
         case .b2b:
             return "B2B"
         }

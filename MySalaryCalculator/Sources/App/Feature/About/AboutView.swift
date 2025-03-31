@@ -50,6 +50,7 @@ struct AboutView: View {
             reducer: { AboutFeature() }
         )
     )
+    .environmentObject(AppData())
 }
 
 

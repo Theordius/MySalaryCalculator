@@ -1,53 +1,181 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "About" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Aplikacji"
+          }
+        }
+      }
+    },
     "About App" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Aplikacji"
+          }
+        }
+      }
     },
     "Appointment" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powołanie"
+          }
+        }
+      }
     },
     "B2B" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B2B"
+          }
+        }
+      }
     },
     "B2B View" : {
-
+      "shouldTranslate" : false
     },
     "Calculate" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oblicz"
+          }
+        }
+      }
     },
-    "Choose payment form" : {
-
+    "Choose settlement form" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz formę rozliczenia"
+          }
+        }
+      }
+    },
+    "Cost of Revenue" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koszty uzyskania przychodu"
+          }
+        }
+      }
     },
     "Dividend" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dywidenda"
+          }
+        }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angielski"
+          }
+        }
+      }
     },
     "FTE" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UOP"
+          }
+        }
+      }
     },
     "FTE View" : {
-
+      "shouldTranslate" : false
     },
     "Gross" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brutto"
+          }
+        }
+      }
     },
     "Gross value" : {
-
-    },
-    "Income costs" : {
-
-    },
-    "KUP" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wartość brutto"
+          }
+        }
+      }
     },
     "LTD" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sp. z o.o."
+          }
+        }
+      }
     },
     "Payment form" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forma płatności"
+          }
+        }
+      }
+    },
+    "Polish" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polski"
+          }
+        }
+      }
+    },
+    "Revenue" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przychód"
+          }
+        }
+      }
     },
     "To account" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na konto"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

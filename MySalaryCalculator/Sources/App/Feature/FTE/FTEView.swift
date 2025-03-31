@@ -31,6 +31,7 @@ struct FTEView: View {
             reducer: { FTEFeature() }
         )
     )
+    .environmentObject(AppData())
 }
 
 

@@ -17,7 +17,7 @@ struct LTDView: View {
             WithViewStore(store, observe: { $0 }) { viewStore in
                 VStack(spacing: 16) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Choose payment form")
+                        Text("Choose settlement form")
                             .font(.subheadline)
                             .padding(.horizontal)
 
@@ -54,6 +54,7 @@ struct LTDView: View {
             reducer: { LTDFeature() }
         )
     )
+    .environmentObject(AppData())
 }
 
 

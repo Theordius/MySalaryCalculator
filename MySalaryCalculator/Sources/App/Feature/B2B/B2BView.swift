@@ -31,4 +31,5 @@ struct B2BView: View {
             reducer: { B2BFeature() }
         )
     )
+    .environmentObject(AppData())
 }
