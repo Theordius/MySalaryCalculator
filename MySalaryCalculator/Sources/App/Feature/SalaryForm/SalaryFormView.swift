@@ -8,46 +8,51 @@
 import SwiftUI
 import ComposableArchitecture
 
+
 @ViewAction(for: SalaryFormFeature.self)
 struct SalaryFormView: View {
+
+    enum Field: Hashable {
+        case gross, revenue
+    }
+
+    //MARK: - Properties
+    @FocusState private var focusedField: Field?
+    @State private var grossText: String = ""
+    @State private var revenueText: String = ""
+
     let store: StoreOf<SalaryFormFeature>
 
+    //MARK: - Body
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             Form {
                 Section(header: Text("Gross value")) {
-                    TextField(
-                        "Gross",
-                        text: viewStore.binding(
-                            get: { $0.grossAmount == 0 ? "" : "\($0.grossAmount)" },
-                            send: { text in
-                                let value = Decimal(string: text) ?? 0
-                                return .view(.grossChanged(value))
-                            }
-                        )
-                    )
-                    .keyboardType(.decimalPad)
+                    TextField("Gross", text: $grossText)
+                        .keyboardType(.decimalPad)
+                        .focused($focusedField, equals: .gross)
+                        .onChange(of: grossText) { newValue, _ in
+                            let value = Decimal(string: newValue) ?? 0
+                            viewStore.send(.view(.grossChanged(value)))
+                        }
                 }
 
                 Section(header: Text("Cost of Revenue")) {
-                    TextField(
-                        "Revenue",
-                        text: viewStore.binding(
-                            get: { $0.costOfRevenue == 0 ? "" : "\($0.costOfRevenue)" },
-                            send: { text in
-                                let value = Decimal(string: text) ?? 0
-                                return .view(.costChanged(value))
-                            }
-                        )
-                    )
-                    .keyboardType(.decimalPad)
+                    TextField("Revenue", text: $revenueText)
+                        .keyboardType(.decimalPad)
+                        .focused($focusedField, equals: .revenue)
+                        .onChange(of: revenueText) { newValue, _ in
+                            let value = Decimal(string: newValue) ?? 0
+                            viewStore.send(.view(.costChanged(value)))
+                        }
                 }
 
                 Section {
                     HStack {
                         Spacer()
                         Button("Calculate") {
-                            send(.calculate)
+                            viewStore.send(.view(.calculate))
+                            focusedField = nil
                         }
                         Spacer()
                     }
@@ -61,9 +66,18 @@ struct SalaryFormView: View {
                     }
                 }
             }
-            .animation(.default, value: viewStore.netAmount)
-
+            .onAppear {
+                grossText = viewStore.state.grossAmount == 0 ? "" : "\(viewStore.state.grossAmount)"
+                revenueText = viewStore.state.costOfRevenue == 0 ? "" : "\(viewStore.state.costOfRevenue)"
+            }
             .padding()
+            .background(
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        focusedField = nil
+                    }
+            )
         }
     }
 }
