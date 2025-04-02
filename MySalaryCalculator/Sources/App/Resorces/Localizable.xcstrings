@@ -84,6 +84,9 @@
         }
       }
     },
+    "Drugi Prog Podatkowy" : {
+
+    },
     "English" : {
       "localizations" : {
         "pl" : {
@@ -162,7 +165,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Przychód"
+            "value" : "Koszty uzyskania przychodu"
           }
         }
       }

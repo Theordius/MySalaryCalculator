@@ -34,6 +34,14 @@ struct LTDView: View {
                         .padding(.horizontal)
                     }
 
+                    if viewStore.form.employmentForm == .appointment || viewStore.form.employmentForm == .fte {
+                        Toggle("Drugi Prog Podatkowy", isOn: viewStore.binding(
+                            get: \.form.useSecondTaxBracket,
+                            send: { .child(.form(.view(.secondTaxBracketToggled($0)))) }
+                        ))
+                        .padding(.horizontal)
+                    }
+
                     SalaryFormView(
                         store: store.scope(
                             state: \.form,
@@ -56,5 +64,3 @@ struct LTDView: View {
     )
     .environmentObject(AppData())
 }
-
-

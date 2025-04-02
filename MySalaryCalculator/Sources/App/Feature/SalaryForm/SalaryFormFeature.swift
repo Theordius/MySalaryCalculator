@@ -17,7 +17,7 @@ struct SalaryFormFeature: Sendable {
         var flatTaxEnabled: Bool = false
         var flatTaxSelected: Bool = false
         var netAmount: Decimal?
-        
+        var useSecondTaxBracket: Bool = false
         var showFlatTaxToggle: Bool
         var showHealthContribution: Bool
         var employmentForm: EmploymentForm
@@ -53,6 +53,7 @@ struct SalaryFormFeature: Sendable {
             case costChanged(Decimal)
             case flatTaxToggled(Bool)
             case employmentFormChanged(EmploymentForm)
+            case secondTaxBracketToggled(Bool)
             case calculate
         }
     }
@@ -81,6 +82,11 @@ struct SalaryFormFeature: Sendable {
                 state.netAmount = calculateNet(for: state)
                 return .none
                 
+            case let .view(.secondTaxBracketToggled(isOn)):
+                state.useSecondTaxBracket = isOn
+                return .none
+                
+                
             case .view:
                 return .none
             }
@@ -94,8 +100,9 @@ struct SalaryFormFeature: Sendable {
         
         switch state.employmentForm {
         case .appointment:
-            let health = gross * 0.09
-            let tax = income * 0.12
+            let health = gross * Decimal(Constants.healthInsuranceRate)
+            let taxRate = state.useSecondTaxBracket ? Constants.secondTaxRate : Constants.firstTaxRate
+            let tax = income * Decimal(taxRate)
             let taxRelief: Decimal = 300
             let totalDeductions = max(tax - taxRelief, 0) + health
             return gross - totalDeductions
@@ -111,13 +118,15 @@ struct SalaryFormFeature: Sendable {
             let socialContributions = pension + disability + sickness
             
             let taxableIncome = gross - socialContributions - costOfRevenue
-            let tax = taxableIncome * Decimal(Constants.firstTaxRate)
+            let taxRate = state.useSecondTaxBracket ? Constants.secondTaxRate : Constants.firstTaxRate
+            let tax = taxableIncome * Decimal(taxRate)
             let taxRelief: Decimal = 300
             let netTax = max(tax - taxRelief, 0)
             
-            let healthInsurance = gross * 0.09
+            let healthInsurance = gross * Decimal(Constants.healthInsuranceRate)
             let totalDeductions = socialContributions + netTax + healthInsurance
             return gross - totalDeductions
+            
             
         case .b2b:
             let base = gross - costOfRevenue

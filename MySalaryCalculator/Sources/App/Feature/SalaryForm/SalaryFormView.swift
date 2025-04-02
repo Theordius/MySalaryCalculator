@@ -31,7 +31,7 @@ struct SalaryFormView: View {
                     TextField("Gross", text: $grossText)
                         .keyboardType(.decimalPad)
                         .focused($focusedField, equals: .gross)
-                        .onChange(of: grossText) { newValue, _ in
+                        .onChange(of: grossText) { newValue in
                             let value = Decimal(string: newValue) ?? 0
                             viewStore.send(.view(.grossChanged(value)))
                         }
@@ -41,7 +41,7 @@ struct SalaryFormView: View {
                     TextField("Revenue", text: $revenueText)
                         .keyboardType(.decimalPad)
                         .focused($focusedField, equals: .revenue)
-                        .onChange(of: revenueText) { newValue, _ in
+                        .onChange(of: revenueText) { newValue in
                             let value = Decimal(string: newValue) ?? 0
                             viewStore.send(.view(.costChanged(value)))
                         }
