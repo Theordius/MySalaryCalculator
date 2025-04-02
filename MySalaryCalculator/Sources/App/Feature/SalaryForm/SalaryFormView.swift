@@ -8,7 +8,6 @@
 import SwiftUI
 import ComposableArchitecture
 
-
 @ViewAction(for: SalaryFormFeature.self)
 struct SalaryFormView: View {
 
@@ -16,14 +15,14 @@ struct SalaryFormView: View {
         case gross, revenue
     }
 
-    //MARK: - Properties
+    // MARK: - Properties
     @FocusState private var focusedField: Field?
     @State private var grossText: String = ""
     @State private var revenueText: String = ""
 
     let store: StoreOf<SalaryFormFeature>
 
-    //MARK: - Body
+    // MARK: - Body
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             Form {
@@ -55,14 +54,6 @@ struct SalaryFormView: View {
                             focusedField = nil
                         }
                         Spacer()
-                    }
-                }
-
-                if let net = viewStore.netAmount {
-                    Section(header: Text("To account")) {
-                        Text(net.formatted(.currency(code: "PLN")))
-                            .font(.title2)
-                            .bold()
                     }
                 }
             }

@@ -55,6 +55,7 @@
       }
     },
     "Choose settlement form" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -83,9 +84,6 @@
           }
         }
       }
-    },
-    "Drugi Prog Podatkowy" : {
-
     },
     "English" : {
       "localizations" : {
@@ -140,7 +138,14 @@
         }
       }
     },
+    "Na konto otrzymasz" : {
+
+    },
+    "OK" : {
+
+    },
     "Payment form" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -171,6 +176,7 @@
       }
     },
     "To account" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -179,6 +185,9 @@
           }
         }
       }
+    },
+    "Wybierz formę rozliczania" : {
+
     }
   },
   "version" : "1.0"

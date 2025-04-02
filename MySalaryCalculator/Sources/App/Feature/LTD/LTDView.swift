@@ -10,44 +10,74 @@ import ComposableArchitecture
 
 @ViewAction(for: LTDFeature.self)
 struct LTDView: View {
+
+    //MARK: - Properties:
+    @State private var showForm: Bool = false
+    @State private var showAlert: Bool = false
+    
     let store: StoreOf<LTDFeature>
 
     var body: some View {
         NavigationStack {
             WithViewStore(store, observe: { $0 }) { viewStore in
-                VStack(spacing: 16) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Choose settlement form")
-                            .font(.subheadline)
-                            .padding(.horizontal)
+                ZStack {
+                    VStack(spacing: 16) {
+                        Text("Wybierz formę rozliczania")
+                            .font(.title2)
+                            .padding()
 
-                        Picker("Payment form", selection: viewStore.binding(
-                            get: \.form.employmentForm,
-                            send: { .child(.form(.view(.employmentFormChanged($0)))) }
-                        )) {
+                        VStack(spacing: 12) {
                             ForEach([EmploymentForm.appointment, .dividend, .fte], id: \.self) { form in
-                                Text(form.description)
-                                    .tag(form)
+                                Button(action: {
+                                    viewStore.send(.child(.form(.view(.employmentFormChanged(form)))))
+                                    withAnimation(.easeInOut) {
+                                        showForm = true
+                                    }
+                                }) {
+                                    Text(form.description)
+                                        .frame(maxWidth: .infinity)
+                                        .padding()
+                                        .background(Color.blue.opacity(0.2))
+                                        .cornerRadius(8)
+                                }
+                                .padding(.horizontal)
                             }
+                            Spacer()
                         }
-                        .pickerStyle(.segmented)
-                        .padding(.horizontal)
                     }
-
-                    if viewStore.form.employmentForm == .appointment || viewStore.form.employmentForm == .fte {
-                        Toggle("Drugi Prog Podatkowy", isOn: viewStore.binding(
-                            get: \.form.useSecondTaxBracket,
-                            send: { .child(.form(.view(.secondTaxBracketToggled($0)))) }
-                        ))
-                        .padding(.horizontal)
-                    }
-
+                    .blur(radius: showAlert ? 10 : 0)
+                }
+                .fullScreenCover(isPresented: $showForm) {
                     SalaryFormView(
                         store: store.scope(
                             state: \.form,
                             action: \.child.form
                         )
                     )
+                    .transition(.move(edge: .bottom))
+                    .animation(.easeInOut, value: showForm)
+                }
+                .onChange(of: viewStore.form.netAmount) { newValue in
+                    if newValue != nil {
+                        withAnimation(.easeInOut) {
+                            showForm = false
+                        }
+                        Task {
+                            try? await Task.sleep(nanoseconds: 300_000_000)
+                            withAnimation(.easeInOut) {
+                                showAlert = true
+                            }
+                        }
+                    }
+                }
+                .alert("Na konto otrzymasz", isPresented: $showAlert) {
+                    Button("OK", role: .cancel) {
+                        withAnimation(.easeInOut) {
+                            showAlert = false
+                        }
+                    }
+                } message: {
+                    Text("\(viewStore.form.netAmount ?? 0) zł")
                 }
                 .navigationTitle("LTD")
             }
