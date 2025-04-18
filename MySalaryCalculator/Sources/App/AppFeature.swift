@@ -11,7 +11,7 @@ import ComposableArchitecture
 struct AppFeature: Sendable {
 
     enum Tab: Sendable, CaseIterable, Equatable {
-        case about, ltd, b2b, fte
+        case about, llc, b2b, fte
     }
 
     @ObservableState

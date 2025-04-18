@@ -45,6 +45,7 @@
       "shouldTranslate" : false
     },
     "Calculate" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -66,6 +67,7 @@
       }
     },
     "Cost of Revenue" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -84,6 +86,9 @@
           }
         }
       }
+    },
+    "Do wypłaty: %@" : {
+
     },
     "English" : {
       "localizations" : {
@@ -109,6 +114,7 @@
       "shouldTranslate" : false
     },
     "Gross" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -119,6 +125,7 @@
       }
     },
     "Gross value" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {
@@ -127,6 +134,12 @@
           }
         }
       }
+    },
+    "Koszty uzyskania" : {
+
+    },
+    "LLC" : {
+
     },
     "LTD" : {
       "localizations" : {
@@ -139,6 +152,9 @@
       }
     },
     "Na konto otrzymasz" : {
+
+    },
+    "Oblicz" : {
 
     },
     "OK" : {
@@ -166,6 +182,7 @@
       }
     },
     "Revenue" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pl" : {
           "stringUnit" : {

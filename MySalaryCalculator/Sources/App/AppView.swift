@@ -39,7 +39,7 @@ struct AppView: View {
                     action: \.child.about
                 )
             )
-        case .ltd:
+        case .llc:
             LTDView(
                 store: store.scope(
                     state: \.ltdState,
@@ -68,35 +68,69 @@ private extension AppView {
     @ToolbarContentBuilder
     private func toolbarContent() -> some ToolbarContent {
         ToolbarItemGroup(placement: .bottomBar) {
-            HStack(spacing: 16) {
-                tabBarButton(title: "About", systemImage: "info.circle", tab: .about)
-                tabBarButton(title: "LTD", systemImage: "building.2", tab: .ltd)
-                tabBarButton(title: "B2B", systemImage: "briefcase", tab: .b2b)
-                tabBarButton(title: "FTE", systemImage: "person.crop.circle", tab: .fte)
+            HStack(spacing: 8) {
+                ForEach(AppFeature.Tab.allCases, id: \.self) { tab in
+                    tabBarButton(title: tab.title, systemImage: tab.systemImage, tab: tab)
+                        .frame(maxWidth: .infinity)
+                }
             }
-            .padding(.horizontal, 32)
+            .dynamicTypeSize(.medium)
+            .frame(height: 64)
+            .padding(.horizontal, 16)
             .padding(.vertical, 4)
-            .background(Material.ultraThickMaterial)
+            .background(Material.ultraThin)
             .cornerRadius(20)
             .tabBarShadow()
         }
+
         ToolbarItem(placement: .topBarTrailing) {
             LanguageOptionsMenuView()
         }
     }
 
-    private func tabBarButton(title: LocalizedStringKey, systemImage: String, tab: AppFeature.Tab) -> some View {
+    private func tabBarButton(
+        title: LocalizedStringKey,
+        systemImage: String,
+        tab: AppFeature.Tab
+    ) -> some View {
         Button {
             send(.changeTab(tab))
         } label: {
-            VStack {
+            VStack(spacing: 8) {
                 Image(systemName: systemImage)
+                    .frame(width: 24, height: 24)
                 Text(title)
+                    .lineLimit(1)
                     .font(.footnote)
             }
             .tint(store.selectedTab == tab ? .accentColor : .secondary)
         }
+        .dynamicTypeSize(.medium)
     }
+}
+
+extension AppFeature.Tab {
+    var title: LocalizedStringKey {
+        switch self {
+        case .about: "About"
+        case .llc: "LLC"
+        case .b2b: "B2B"
+        case .fte: "FTE"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .about: "info.circle"
+        case .llc: "building.2"
+        case .b2b: "briefcase"
+        case .fte: "person.crop.circle"
+        }
+    }
+
+    func isSelected(_ selectedTab: AppFeature.Tab) -> Bool {
+           self == selectedTab
+       }
 }
 
 #Preview {

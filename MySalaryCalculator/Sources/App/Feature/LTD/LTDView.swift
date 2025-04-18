@@ -77,7 +77,7 @@ struct LTDView: View {
                         }
                     }
                 } message: {
-                    Text("\(viewStore.form.netAmount ?? 0) zł")
+                    Text(CurrencyFormatter().string(from: viewStore.form.netAmount ?? 0))
                 }
                 .navigationTitle("LTD")
             }
