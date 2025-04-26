@@ -1,0 +1,215 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "About" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Aplikacji"
+          }
+        }
+      }
+    },
+    "About App" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Aplikacji"
+          }
+        }
+      }
+    },
+    "Appointment" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powołanie"
+          }
+        }
+      }
+    },
+    "B2B" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B2B"
+          }
+        }
+      }
+    },
+    "B2B View" : {
+      "shouldTranslate" : false
+    },
+    "Calculate" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oblicz"
+          }
+        }
+      }
+    },
+    "Choose settlement form" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz formę rozliczenia"
+          }
+        }
+      }
+    },
+    "Cost of Revenue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koszty uzyskania przychodu"
+          }
+        }
+      }
+    },
+    "Dividend" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dywidenda"
+          }
+        }
+      }
+    },
+    "Do wypłaty: %@" : {
+
+    },
+    "English" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angielski"
+          }
+        }
+      }
+    },
+    "FTE" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UOP"
+          }
+        }
+      }
+    },
+    "FTE View" : {
+      "shouldTranslate" : false
+    },
+    "Gross" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brutto"
+          }
+        }
+      }
+    },
+    "Gross value" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wartość brutto"
+          }
+        }
+      }
+    },
+    "Koszty uzyskania" : {
+
+    },
+    "Kwota brutto" : {
+
+    },
+    "LLC" : {
+
+    },
+    "LTD" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spółka"
+          }
+        }
+      }
+    },
+    "Na konto otrzymasz" : {
+
+    },
+    "Oblicz" : {
+
+    },
+    "OK" : {
+
+    },
+    "Payment form" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forma płatności"
+          }
+        }
+      }
+    },
+    "Polish" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polski"
+          }
+        }
+      }
+    },
+    "Revenue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koszty uzyskania przychodu"
+          }
+        }
+      }
+    },
+    "To account" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na konto"
+          }
+        }
+      }
+    },
+    "Wybierz formę rozliczania" : {
+
+    }
+  },
+  "version" : "1.0"
+}

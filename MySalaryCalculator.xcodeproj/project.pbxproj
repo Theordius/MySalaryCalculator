@@ -33,42 +33,10 @@
 		10E860C62D996DB200CDD4D2 /* MySalaryCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySalaryCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		10E860F82D996F4D00CDD4D2 /* Exceptions for "MySalaryCalculator" folder in "MySalaryCalculator" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Tests/MySalaryCalculatorTests/MySalaryCalculatorTests.swift,
-				Tests/MySalaryCalculatorUITests/MySalaryCalculatorUITests.swift,
-				Tests/MySalaryCalculatorUITests/MySalaryCalculatorUITestsLaunchTests.swift,
-			);
-			target = 10E860AB2D996DAB00CDD4D2 /* MySalaryCalculator */;
-		};
-		10E860F92D996F4D00CDD4D2 /* Exceptions for "MySalaryCalculator" folder in "MySalaryCalculatorTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Tests/MySalaryCalculatorTests/MySalaryCalculatorTests.swift,
-			);
-			target = 10E860BB2D996DB200CDD4D2 /* MySalaryCalculatorTests */;
-		};
-		10E861032D99709600CDD4D2 /* Exceptions for "MySalaryCalculator" folder in "MySalaryCalculatorUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Tests/MySalaryCalculatorUITests/MySalaryCalculatorUITests.swift,
-				Tests/MySalaryCalculatorUITests/MySalaryCalculatorUITestsLaunchTests.swift,
-			);
-			target = 10E860C52D996DB200CDD4D2 /* MySalaryCalculatorUITests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		10E860EE2D996F0400CDD4D2 /* MySalaryCalculator */ = {
+		10E860EE2D996F0400CDD4D2 /* Project */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				10E860F82D996F4D00CDD4D2 /* Exceptions for "MySalaryCalculator" folder in "MySalaryCalculator" target */,
-				10E860F92D996F4D00CDD4D2 /* Exceptions for "MySalaryCalculator" folder in "MySalaryCalculatorTests" target */,
-				10E861032D99709600CDD4D2 /* Exceptions for "MySalaryCalculator" folder in "MySalaryCalculatorUITests" target */,
-			);
-			path = MySalaryCalculator;
+			path = Project;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -102,7 +70,7 @@
 		10E860A32D996DAB00CDD4D2 = {
 			isa = PBXGroup;
 			children = (
-				10E860EE2D996F0400CDD4D2 /* MySalaryCalculator */,
+				10E860EE2D996F0400CDD4D2 /* Project */,
 				10E860AD2D996DAB00CDD4D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,7 +101,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				10E860EE2D996F0400CDD4D2 /* MySalaryCalculator */,
+				10E860EE2D996F0400CDD4D2 /* Project */,
 			);
 			name = MySalaryCalculator;
 			packageProductDependencies = (
